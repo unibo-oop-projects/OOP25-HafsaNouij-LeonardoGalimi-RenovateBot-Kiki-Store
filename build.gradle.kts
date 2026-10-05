@@ -1,3 +1,4 @@
+
 plugins {
     // Apply the java plugin to add support for Java
     java
@@ -12,7 +13,12 @@ plugins {
      */
     id("com.gradleup.shadow") version "9.4.1"
     id("org.danilopianini.gradle-java-qa") version "1.172.0"
+
+    id("org.danilopianini.unibo-oop-gradle-plugin") version "2.0.36"
 }
+
+java { toolchain { languageVersion.set(JavaLanguageVersion.of(25)) } }
+
 
 java {
     toolchain {
